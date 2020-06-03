@@ -23,6 +23,14 @@ def Problem1():
     Densidade_Fluido = input()
     Densidade_Objecto = input()
     Volume = input()
+    resultado
+
+    while (True):
+        if():
+
+
+        elif (input == "Exit"):
+            exit()
     
     
     
@@ -30,9 +38,16 @@ def Problem1():
     
         
 def Problem2():
+
     Gravidade2 = input()
     Massa_Objecto = input()
     Comprimento = input()
     Constate = input()
+
+    while ( True):
+         if():
+
+    elif (input == "Exit"):
+            exit()
 
 Main()
