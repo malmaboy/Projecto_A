@@ -16,7 +16,7 @@ def MainMenu(): # Menu principal
         Problem1()
     elif input()== "2":
         Problem2()
-        
+       
 """
 def Problem1(): ## Flutuação 
 
@@ -26,22 +26,50 @@ def Problem1(): ## Flutuação
     DF = float(input()) # Densidade do Fluido
     print("Insert object density")
     DO = float(input()) # Densidade do Objeto
-    Print("Insert de side of cube")
-    L = float(input() # Lado do cubo
+    print("Insert de side of cube")
+    L = float(input()) # Aresta do cubo
+    V = float() # Volume
     V = L * L * L 
+     
+    
+    # Variaveis
+    M = float() # Massa
+    FG = float() # Força Gravítica 
+    FB = float() # força Buoyancy
+    A = float() # area 
+    C = float() # Calado
+
+
+
     
 
     ## Formula Fb = P.G.V
 
     while (True):
         
-        print("Object Properties: Mass =" + str() + "Density=" + str() +  "Volume ="+ str(V))
-        print("Fluid has density of " + str() + "Gravity is" + str())
+        print("Object Properties: Mass =" + str(M) + "Density=" + str(DO) +  "Volume ="+ str(V))
+        print("Fluid has density of " + str(DF) + "Gravity is" + str(G))
          
-        
-"""     
+        # Formula para o Volume
+        V = L * L * L 
 
-    
+        # Calcular a Massa  
+        M = DO * V
+        # Calcular o Volume 
+        V = M/ DO
+        
+        # Força gravítica
+        FG = M * G
+        # Força de Buoyancy
+        FB = FG / (DF * G)
+        # Calado 
+        C = FB / (L * L)
+
+        response = input()
+
+        if():
+
+ """
     
     
     
@@ -58,7 +86,6 @@ def Problem2(): ## Molas
     R = float(input()) # Comprimento da mola em descanso 
     L = float() # Comprimento da mola esticada  
     Fg = float() # força gravitica 
-    Fg = M * ForçaGravítica # Força Gravítica 
     add = float() # Cálculos axilares
 
     print(Fg)
@@ -70,23 +97,32 @@ def Problem2(): ## Molas
 
         print("Object mass is: " + str(M), "Gravity is: " + str(ForçaGravítica))
         print("Base spring length is: " + str(R), "Constant = " + str(K)) 
-
+        Fg = M * ForçaGravítica # Força Gravítica 
         add = (- K * -R) + -Fg ## formula 
-        print(add)
-        L = add / K
+        L = add / K # Comprimento da mola esticada 
         print("Spring would stretch to: " + str(L))
         
-        response = float(input())
+        print("1. Set Mass:")
+        print("2. Set Constant:")
+        print("3. Set Gravity:")
+        print("4. Set Length:")
 
-        if(response == "Set Mass" ):
-            M = float(X)
-            print(M)
-        elif(response == "Set Constant ".split()):
-            K = response
-        elif(response == "Set Gravity" ):
-            ForçaGravítica = response
-        elif( response == "Set Length "):    
-            R = response
+        response = input() # input da resposta 
+ 
+        if( response == "1"): # Modifica a massa
+            print("Insert the new Mass: ")
+            M = float(input())
+        elif(response == "2"): # Modifica a constante 
+            print("Insert the new Constant: ")
+            K = float(input())
+        elif(response == "3" ): # Modifica a gravidade 
+            print("Insert the new Gravity: ")
+            ForçaGravítica = float(input())
+        elif( response == "4"): # Modifica o comprimento da mola em descanso 
+            print("Insert the new Length: ")    
+            R = float(input())
+            
+Main() # Chama a função principal 
         
         
 
@@ -100,5 +136,3 @@ def Problem2(): ## Molas
 
     
 
-
-Main() # Chama a função principal 
