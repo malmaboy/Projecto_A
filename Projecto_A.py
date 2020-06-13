@@ -17,7 +17,7 @@ def MainMenu(): # Menu principal
     elif input()== "2":
         Problem2()
        
-"""
+
 def Problem1(): ## Flutuação 
 
     print("Insert de Gravity: ")
@@ -28,8 +28,7 @@ def Problem1(): ## Flutuação
     DO = float(input()) # Densidade do Objeto
     print("Insert de side of cube")
     L = float(input()) # Aresta do cubo
-    V = float() # Volume
-    V = L * L * L 
+    
      
     
     # Variaveis
@@ -38,39 +37,64 @@ def Problem1(): ## Flutuação
     FB = float() # força Buoyancy
     A = float() # area 
     C = float() # Calado
+    V = float() # Volume
 
 
 
     
 
-    ## Formula Fb = P.G.V
+    
 
     while (True):
         
-        print("Object Properties: Mass =" + str(M) + "Density=" + str(DO) +  "Volume ="+ str(V))
-        print("Fluid has density of " + str(DF) + "Gravity is" + str(G))
-         
         # Formula para o Volume
         V = L * L * L 
-
+        print(V)
         # Calcular a Massa  
         M = DO * V
         # Calcular o Volume 
         V = M/ DO
+        print(V)
+        
+
+        print("Object Properties: Mass = " + str(M),  "Density= ", str(DO),   "Volume = " + str(V))
+        print("Fluid has density of " + str(DF),  "Gravity is " + str(G))
+         
+
         
         # Força gravítica
         FG = M * G
+        print(FG)
         # Força de Buoyancy
         FB = FG / (DF * G)
+        print(FB)
         # Calado 
         C = FB / (L * L)
+        
+        print("The Object would float at: " +  str(C))
+
+        print("1. Set Gravity: ")
+        print("2. Set Fluid Density: ")
+        print("3. Set Object Density: ")
+        print("4. Set Volume: ")
 
         response = input()
 
-        if():
-
- """
-    
+        if(response == "1"):
+            print("Inset the new Gravity: ")
+            G = float(input())
+        elif(response == "2"):
+            print("Insert the new Fluid Density: ")
+            DF = float(input()) 
+        elif(response == "3"):
+            print("Insert the new Object Density: ")
+            DO = float(input())
+            print(V)
+        elif(response == "4"):
+            print("Insert the new edge cube")
+            L = float(input())
+        else:
+            print("Not the correct answer.")
     
     
         
@@ -85,15 +109,12 @@ def Problem2(): ## Molas
     print("Insert the base spring length: ")
     R = float(input()) # Comprimento da mola em descanso 
     L = float() # Comprimento da mola esticada  
-    Fg = float() # força gravitica 
+    Fg = float() # força gravítica 
     add = float() # Cálculos axilares
 
     print(Fg)
     
-    while (True):
-        
-        X = str()
-        
+    while (True): 
 
         print("Object mass is: " + str(M), "Gravity is: " + str(ForçaGravítica))
         print("Base spring length is: " + str(R), "Constant = " + str(K)) 
@@ -121,6 +142,8 @@ def Problem2(): ## Molas
         elif( response == "4"): # Modifica o comprimento da mola em descanso 
             print("Insert the new Length: ")    
             R = float(input())
+        else:
+            print("Not the correct answer.")
             
 Main() # Chama a função principal 
         
