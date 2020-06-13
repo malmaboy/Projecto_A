@@ -5,7 +5,7 @@ def Main():
     
     
     
-def MainMenu():
+def MainMenu(): # Menu principal 
     
     print("What problem do you want to solve? ")
     print("1. Floatation ")
@@ -17,25 +17,29 @@ def MainMenu():
     elif input()== "2":
         Problem2()
         
-
+"""
 def Problem1(): ## Flutuação 
 
     print("Insert de Gravity: ")
     G = float(input()) # Gravidade
-    print("Insert ")
+    print("Insert fluid density ")
     DF = float(input()) # Densidade do Fluido
+    print("Insert object density")
     DO = float(input()) # Densidade do Objeto
-    V = float(input() # Volume 
+    Print("Insert de side of cube")
+    L = float(input() # Lado do cubo
+    V = L * L * L 
     
 
     ## Formula Fb = P.G.V
 
     while (True):
+        
         print("Object Properties: Mass =" + str() + "Density=" + str() +  "Volume ="+ str(V))
         print("Fluid has density of " + str() + "Gravity is" + str())
          
         
-        
+"""     
 
     
     
@@ -61,6 +65,8 @@ def Problem2(): ## Molas
     
     while (True):
         
+        X = str()
+        
 
         print("Object mass is: " + str(M), "Gravity is: " + str(ForçaGravítica))
         print("Base spring length is: " + str(R), "Constant = " + str(K)) 
@@ -70,10 +76,10 @@ def Problem2(): ## Molas
         L = add / K
         print("Spring would stretch to: " + str(L))
         
-        response = input()
+        response = float(input())
 
-        if(response == "Set Mass ".split()):
-            M = float(response) 
+        if(response == "Set Mass" ):
+            M = float(X)
             print(M)
         elif(response == "Set Constant ".split()):
             K = response
@@ -95,4 +101,4 @@ def Problem2(): ## Molas
     
 
 
-Main()
+Main() # Chama a função principal 
