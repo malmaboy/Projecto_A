@@ -1,4 +1,4 @@
-def Main():
+def Main(): # função principal 
     MainMenu()
     
     
@@ -11,10 +11,12 @@ def MainMenu(): # Menu principal
     print("1. Floatation ")
     print("2. Springs")
     
-    
-    if input() == "1":
+    a = input() # resposta
+     
+    # Verifica a resposta
+    if (a == "1"):
         Problem1()
-    elif input()== "2":
+    elif (a == "2"):
         Problem2()
        
 
@@ -94,7 +96,7 @@ def Problem1(): ## Flutuação
             print("Insert the new edge cube")
             L = float(input())
         else:
-            print("Not the correct answer.")
+            print("Type 1-4 to set a new parameter.")
     
     
         
@@ -143,7 +145,7 @@ def Problem2(): ## Molas
             print("Insert the new Length: ")    
             R = float(input())
         else:
-            print("Not the correct answer.")
+            print("Type 1-4 to set a new parameter.")
             
 Main() # Chama a função principal 
         
