@@ -123,11 +123,11 @@ def Problem2(): ## Molas
     
     while (True): 
 
-        print("Object mass is: " + str(M), +  "Gravity is: " + str(ForçaGravítica))
-        print("Base spring length is: " + str(R), +  "Constant = " + str(K)) 
-
+        print("Object mass is: " + str(M), "Gravity is: ", str(ForçaGravítica))
+        print("Base spring length is: " + str(R), "Constant = " + str(K)) 
         Fg = M * ForçaGravítica # Força Gravítica 
         add = (- K * -R) + -Fg ## formula
+        print(add)
         L = add / K # Comprimento da mola esticada 
         print("Spring would stretch to: " + str(L))
         
