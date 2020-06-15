@@ -1,3 +1,5 @@
+import math
+
 def Main(): # função principal 
     MainMenu()
     
@@ -18,17 +20,19 @@ def MainMenu(): # Menu principal
         Problem1()
     elif (a == "2"):
         Problem2()
+    else:
+        print("choose between 1 or 2, to solve a problem: ")
        
 
 def Problem1(): ## Flutuação 
 
-    print("Insert de Gravity: ")
+    print("Insert the Gravity: ")
     G = float(input()) # Gravidade
     print("Insert fluid density ")
     DF = float(input()) # Densidade do Fluido
     print("Insert object density")
-    DO = float(input()) # Densidade do Objeto
-    print("Insert de side of cube")
+    DO = float(input()) # Densidade do Objeto (P)
+    print("Insert the side of cube")
     L = float(input()) # Aresta do cubo
     
      
@@ -49,11 +53,9 @@ def Problem1(): ## Flutuação
 
     while (True):
         
-        # Formula para o Volume
-        V = L * L * L 
-        print(V)
         # Calcular a Massa  
         M = DO * V
+        print(M)
         # Calcular o Volume 
         V = M/ DO
         print(V)
@@ -68,10 +70,10 @@ def Problem1(): ## Flutuação
         FG = M * G
         print(FG)
         # Força de Buoyancy
-        FB = FG / (DF * G)
+        FB = FG * DF * G  
         print(FB)
         # Calado 
-        C = FB / (L * L)
+        C = FB 
         
         print("The Object would float at: " +  str(C))
 
@@ -104,24 +106,28 @@ def Problem2(): ## Molas
     
     print("Insert the Gravity: ")
     ForçaGravítica = float(input()) # gravidade 
-    print("Insert de Mass: ")
+    print("Insert the Mass: ")
     M = float(input()) # Massa do corpo
     print("Insert the Constant: ")
     K = float(input()) # Constante de mola
     print("Insert the base spring length: ")
     R = float(input()) # Comprimento da mola em descanso 
+
+
+    #Variaveis 
     L = float() # Comprimento da mola esticada  
     Fg = float() # força gravítica 
     add = float() # Cálculos axilares
 
-    print(Fg)
+    
     
     while (True): 
 
-        print("Object mass is: " + str(M), "Gravity is: " + str(ForçaGravítica))
-        print("Base spring length is: " + str(R), "Constant = " + str(K)) 
+        print("Object mass is: " + str(M), +  "Gravity is: " + str(ForçaGravítica))
+        print("Base spring length is: " + str(R), +  "Constant = " + str(K)) 
+
         Fg = M * ForçaGravítica # Força Gravítica 
-        add = (- K * -R) + -Fg ## formula 
+        add = (- K * -R) + -Fg ## formula
         L = add / K # Comprimento da mola esticada 
         print("Spring would stretch to: " + str(L))
         
