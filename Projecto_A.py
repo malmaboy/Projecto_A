@@ -53,16 +53,9 @@ def Problem1(): ## Flutuação
 
     while (True):
         
-        print(M)
-        print(DO)
+    
         # Calcular a Massa  
         M = DO * V
-        ##print(M)
-        
-        # Calcular o Volume 
-        #V = M/ DO
-        print(V)
-        
 
         print("Object Properties: Mass = " + str(M),  "Density = ", str(DO),   "Volume = " + str(V))
         print("Fluid has density of " + str(DF),  "Gravity is " + str(G))
@@ -71,16 +64,11 @@ def Problem1(): ## Flutuação
         
         # Força gravítica
         FG = M * G 
-        print(FG)
         # Volume do objeto de baixo de agua 
-        FB = FG / (DF * G)  
-        print("G" + str(G))
-        print(FB) # volume do objeto de baixo de agua 
+        FB = FG / (DF * G)  # volume do objeto de baixo de agua 
         # Calado
         F =  V**(1/3)
-        print(F)
         C = FB / (F * F) 
-        print(C)
         
         print("The Object would float at: " +  str(C))
 
@@ -103,8 +91,7 @@ def Problem1(): ## Flutuação
         elif(response == "4"):
             print("Insert the new Volume")
             V = float(input())
-            M = DO * V  ####
-            print(M)
+            M = DO * V  
         else:
             print("Type 1-4 to set a new parameter.")
     
