@@ -13,15 +13,20 @@ def MainMenu(): # Menu principal
     print("1. Floatation ")
     print("2. Springs")
     
-    a = input() # resposta
      
-    # Verifica a resposta
-    if (a == "1"):
-        Problem1()
-    elif (a == "2"):
-        Problem2()
-    else:
-        print("choose between 1 or 2, to solve a problem: ")
+    while(True):
+        
+        # Verifica a resposta
+        a = input() # resposta
+    
+        if (a == "1"):
+            Problem1()
+            break
+        elif (a == "2"):
+            Problem2()
+            break
+        else:
+            print("choose between 1 or 2, to solve a problem: ")
        
 
 def Problem1(): ## Flutuação 
@@ -44,12 +49,6 @@ def Problem1(): ## Flutuação
     A = float() # area 
     C = float() # Calado
     F = float() # auxiliar (arestas)
-
-
-
-    
-
-    
 
     while (True):
         
@@ -78,23 +77,20 @@ def Problem1(): ## Flutuação
         print("4. Set Volume: ")
 
         response = input()
-
+                
         if(response == "1"):
-            print("Inset the new Gravity: ")
-            G = float(input())
+            G = float(input("Inset the new Gravity: \n"))
         elif(response == "2"):
-            print("Insert the new Fluid Density: ")
-            DF = float(input()) 
+            DF = float(input("Insert the new Fluid Density: \n")) 
         elif(response == "3"):
-            print("Insert the new Object Density: ")
-            DO = float(input())
+            DO = float(input("Insert the new Object Density: \n "))
         elif(response == "4"):
-            print("Insert the new Volume")
-            V = float(input())
-            M = DO * V  
+            V = float(input("Insert the new Volume: \n"))
+            M = DO * V 
+        elif(response == "5"):
+            M = float(input("Insert the new Mass: \n"))
         else:
             print("Type 1-4 to set a new parameter.")
-    
     
         
 def Problem2(): ## Molas
