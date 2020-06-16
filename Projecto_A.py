@@ -32,18 +32,18 @@ def Problem1(): ## Flutuação
     DF = float(input()) # Densidade do Fluido
     print("Insert object density")
     DO = float(input()) # Densidade do Objeto (P)
-    print("Insert the side of cube")
-    L = float(input()) # Aresta do cubo
+    print("Insert the Volume")
+    V = float(input()) # Volume
     
      
     
     # Variaveis
     M = float() # Massa
     FG = float() # Força Gravítica 
-    FB = float() # força Buoyancy
+    FB = float() # Volume de baixo de agua 
     A = float() # area 
     C = float() # Calado
-    V = float() # Volume
+    F = float() # auxiliar (arestas)
 
 
 
@@ -53,27 +53,34 @@ def Problem1(): ## Flutuação
 
     while (True):
         
+        print(M)
+        print(DO)
         # Calcular a Massa  
         M = DO * V
-        print(M)
+        ##print(M)
+        
         # Calcular o Volume 
-        V = M/ DO
+        #V = M/ DO
         print(V)
         
 
-        print("Object Properties: Mass = " + str(M),  "Density= ", str(DO),   "Volume = " + str(V))
+        print("Object Properties: Mass = " + str(M),  "Density = ", str(DO),   "Volume = " + str(V))
         print("Fluid has density of " + str(DF),  "Gravity is " + str(G))
          
 
         
         # Força gravítica
-        FG = M * G
+        FG = M * G 
         print(FG)
-        # Força de Buoyancy
-        FB = FG * DF * G  
-        print(FB)
-        # Calado 
-        C = FB 
+        # Volume do objeto de baixo de agua 
+        FB = FG / (DF * G)  
+        print("G" + str(G))
+        print(FB) # volume do objeto de baixo de agua 
+        # Calado
+        F =  V**(1/3)
+        print(F)
+        C = FB / (F * F) 
+        print(C)
         
         print("The Object would float at: " +  str(C))
 
@@ -93,10 +100,11 @@ def Problem1(): ## Flutuação
         elif(response == "3"):
             print("Insert the new Object Density: ")
             DO = float(input())
-            print(V)
         elif(response == "4"):
-            print("Insert the new edge cube")
-            L = float(input())
+            print("Insert the new Volume")
+            V = float(input())
+            M = DO * V  ####
+            print(M)
         else:
             print("Type 1-4 to set a new parameter.")
     
@@ -127,7 +135,6 @@ def Problem2(): ## Molas
         print("Base spring length is: " + str(R), "Constant = " + str(K)) 
         Fg = M * ForçaGravítica # Força Gravítica 
         add = (- K * -R) + -Fg ## formula
-        print(add)
         L = add / K # Comprimento da mola esticada 
         print("Spring would stretch to: " + str(L))
         
