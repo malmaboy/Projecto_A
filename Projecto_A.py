@@ -89,6 +89,7 @@ def Problem1(): ## Flutuação
             M = DO * V 
         elif(response == "5"):
             M = float(input("Insert the new Mass: \n"))
+            V = M / DO
         else:
             print("Type 1-4 to set a new parameter.")
     
@@ -129,31 +130,14 @@ def Problem2(): ## Molas
         response = input() # input da resposta 
  
         if( response == "1"): # Modifica a massa
-            print("Insert the new Mass: ")
-            M = float(input())
+            M = float(input("Insert the new Mass: \n"))
         elif(response == "2"): # Modifica a constante 
-            print("Insert the new Constant: ")
-            K = float(input())
+            K = float(input("Insert the new Constant: \n"))
         elif(response == "3" ): # Modifica a gravidade 
-            print("Insert the new Gravity: ")
-            ForçaGravítica = float(input())
-        elif( response == "4"): # Modifica o comprimento da mola em descanso 
-            print("Insert the new Length: ")    
-            R = float(input())
+            ForçaGravítica = float(input(  print("Insert the new Gravity: \n")))
+        elif( response == "4"): # Modifica o comprimento da mola em descanso   
+            R = float(input(print("Insert the new Length: \n")))
         else:
             print("Type 1-4 to set a new parameter.")
             
 Main() # Chama a função principal 
-        
-        
-
-        
-
-        
-
-
-        
-        
-
-    
-
