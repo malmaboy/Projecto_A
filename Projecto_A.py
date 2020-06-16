@@ -69,12 +69,13 @@ def Problem1(): ## Flutuação
         F =  V**(1/3)
         C = FB / (F * F) 
         
-        print("The Object would float at: " +  str(C))
+        print("The Object would float at: " +  str(C) + " meters")
 
         print("1. Set Gravity: ")
         print("2. Set Fluid Density: ")
         print("3. Set Object Density: ")
         print("4. Set Volume: ")
+        print("5. Set Mass: ")
 
         response = input()
                 
@@ -120,7 +121,7 @@ def Problem2(): ## Molas
         Fg = M * ForçaGravítica # Força Gravítica 
         add = (- K * -R) + -Fg ## formula
         L = add / K # Comprimento da mola esticada 
-        print("Spring would stretch to: " + str(L))
+        print("Spring would stretch to: " + str(L) + " meters")
         
         print("1. Set Mass:")
         print("2. Set Constant:")
